@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">RedFlags</string>
+    <string name="red_flags_title_lc">red flags</string>
+    <string name="title_screen_slogan">The game of less than \nideal dates</string>
+    <string name="create_a_game_btn"><u>create a game</u></string>
+    <string name="room_code_hint">Room code</string>
+    <string name="qr_code">QR code</string>
+    <string name="landing_page_img_desc">Illustration of a red flag</string>
+    <string name="play_btn">Play</string>
+    <string name="welcome_text">Hi!</string>
+    <string name="name_question">What\'s your \nname?</string>
+    <string name="username_hint">Username</string>
+    <string name="profile_picture_question">You look something \nlike this?</string>
+    <string name="error_internet_turned_off">Internet is turned off</string>
+    <string name="error_http">An error occured while trying to access the server</string>
+    <string name="check_internet_connection">Check if you are connected to the internet!</string>
+    <string name="room_code_too_short">The room code has to contain 6 characters</string>
+    <string name="failed_to_check_password">Failed to check if this room is password protected. Try again!</string>
+    <string name="new_game_title">new game</string>
+    <string name="number_of_rounds_tag">Number of rounds:</string>
+    <string name="empty_list_error">No packs found sry</string>
+    <string name="packs_tag">Packs:</string>
+    <string name="username_error">Username must be at least 1 character long</string>
+    <string name="error_connection_failed">Failed to connect via WebSockets</string>
+    <string name="lobby_title">lobby</string>
+    <string name="single_this_round">The single \n this round is:</string>
+    <string name="sabotage_title_txt">ruin the date</string>
+    <string name="msg_to_single">This turn you are the single one, you don\'t need to do anything right now</string>
+    <string name="create_a_date_title">create a date</string>
+</resources>

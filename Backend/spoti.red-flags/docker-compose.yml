@@ -1,0 +1,26 @@
+services:
+  web:
+    build: .
+    environment:
+      DEV: true
+    ports:
+      - "8080:8080"
+    depends_on:
+      db:
+        condition: service_healthy
+  db:
+    image: postgres
+    volumes:
+      - ./tmp/db:/var/lib/postgresql/data
+      - ./sql/database_creation.sql:/docker-entrypoint-initdb.d/1.sql
+      - ./sql/cards_fill.sql:/docker-entrypoint-initdb.d/2.sql
+      - ./sql/packs_fill.sql:/docker-entrypoint-initdb.d/3.sql
+    environment:
+      POSTGRES_DB: redflags
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "54333:5432"
+    healthcheck:
+      test: [ "CMD-SHELL", "pg_isready -U postgres" ]
+      interval: 1s

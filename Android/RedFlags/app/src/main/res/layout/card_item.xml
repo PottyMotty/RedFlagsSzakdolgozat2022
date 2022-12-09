@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="@dimen/card_width"
+    android:layout_height="@dimen/card_height"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_marginHorizontal="4dp"
+    app:cardCornerRadius="20dp"
+    app:cardUseCompatPadding="true"
+    android:id="@+id/backgroundCard"
+    app:cardBackgroundColor="@color/light_sand">
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/strokeCard"
+        android:layout_margin="10dp"
+        app:strokeWidth="2dp"
+        app:strokeColor="@color/ok_green"
+        android:elevation="0dp"
+        app:cardBackgroundColor="@color/light_sand"
+        app:cardCornerRadius="17dp">
+        <TextView
+            android:id="@+id/tvDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:fontFamily="@font/worksans_bold"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="23sp"
+            tools:text="Believes you are the most attractive person they've ever seen" />
+
+    </com.google.android.material.card.MaterialCardView>
+
+</com.google.android.material.card.MaterialCardView>

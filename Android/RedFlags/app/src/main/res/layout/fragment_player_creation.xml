@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:background="@color/background_sand"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tvHi"
+        android:layout_marginTop="40dp"
+        android:layout_marginStart="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/welcome_text"
+        android:fontFamily="@font/gilroy"
+        android:textColor="@color/primary_red"
+        android:textSize="55sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvNameQuestion"
+        android:layout_marginTop="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/gilroy"
+        android:text="@string/name_question"
+        android:textColor="@color/dark_red"
+        android:textSize="25sp"
+        app:layout_constraintStart_toStartOf="@+id/tvHi"
+        app:layout_constraintTop_toBottomOf="@+id/tvHi" />
+
+    <EditText
+        android:id="@+id/etUsername"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_alignParentStart="true"
+        android:autofillHints="no"
+        android:layout_marginTop="10dp"
+        android:layout_marginHorizontal="30dp"
+        android:background="@drawable/title_screen_input_bg"
+        android:fontFamily="@font/gilroy"
+        android:hint="@string/username_hint"
+        android:maxLength="12"
+        android:maxLines="1"
+        android:paddingHorizontal="15dp"
+        android:textColor="@color/dark_red"
+        android:textColorHint="@color/background_darker_darker"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvNameQuestion" />
+
+    <TextView
+        android:id="@+id/tvProfileImageQuestion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/gilroy"
+        android:text="@string/profile_picture_question"
+        android:textColor="@color/dark_red"
+        android:textSize="25sp"
+        app:layout_constraintStart_toStartOf="@+id/tvHi"
+        app:layout_constraintTop_toBottomOf="@+id/etUsername" />
+
+    <RelativeLayout
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_margin="20dp"
+        android:background="@drawable/background_circle"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvProfileImageQuestion">
+
+        <com.mikhaellopez.circularimageview.CircularImageView
+            android:id="@+id/ivCatProfile"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="25dp"
+            android:layout_marginBottom="25dp"
+            android:clickable="true"
+            app:civ_border="false" />
+
+        <com.eyalbira.loadingdots.LoadingDots
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/loadingIndicator"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            app:LoadingDots_dots_color="@color/primary_red"
+            android:visibility="invisible"/>
+    </RelativeLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:id="@+id/btNext"
+        app:fabCustomSize="70dp"
+        android:layout_marginBottom="30dp"
+        android:backgroundTint="@color/ok_green"
+        android:src="@drawable/ic_tick_icon"
+        android:foregroundGravity="center"
+        android:scaleType="center"
+        app:maxImageSize="30dp"
+        app:tint="@color/ok_green_darker"
+        android:layout_marginEnd="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

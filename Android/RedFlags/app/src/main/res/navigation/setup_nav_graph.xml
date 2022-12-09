@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/setup_nav_graph"
+    app:startDestination="@id/landingFragment">
+
+    <fragment
+        android:id="@+id/landingFragment"
+        android:name="bme.spoti.redflags.ui.setup.screens.landing.LandingFragment"
+        android:label="LandingFragment" >
+        <action
+            android:id="@+id/action_landingFragment_to_playerCreationFragment"
+            app:destination="@id/playerCreationFragment" />
+        <action
+            android:id="@+id/action_landingFragment_to_newGameFragment"
+            app:destination="@id/newGameFragment" />
+        <action
+            android:id="@+id/action_landingFragment_to_nearbyRoomsFragment"
+            app:destination="@id/nearbyRoomsFragment" />
+        <action
+            android:id="@+id/action_landingFragment_to_inGameActivity"
+            app:destination="@id/inGameActivity" />
+    </fragment>
+    <fragment
+        android:id="@+id/newGameFragment"
+        android:name="bme.spoti.redflags.ui.setup.screens.new_game.NewGameFragment"
+        android:label="NewGameFragment" >
+        <action
+            android:id="@+id/action_newGameFragment_to_playerCreationFragment"
+            app:destination="@id/playerCreationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/playerCreationFragment"
+        android:name="bme.spoti.redflags.ui.setup.screens.player_creation.PlayerCreationFragment"
+        android:label="PlayerCreationFragment">
+        <action
+            android:id="@+id/action_playerCreationFragment_to_inGameActivity"
+            app:destination="@id/inGameActivity" />
+        <argument
+            android:name="roomCode"
+            app:argType="string" />
+        <argument
+            android:name="isPasswordProtected"
+            app:argType="boolean" />
+        <deepLink
+            android:id="@+id/deepLink"
+            app:uri="redflags://room/{roomCode}/{isPasswordProtected}"
+            />
+    </fragment>
+    <activity
+        android:id="@+id/inGameActivity"
+        android:name="bme.spoti.redflags.ui.ingame.InGameActivity"
+        android:label="InGameActivity" >
+        <argument
+            android:name="roomCode"
+            app:argType="string" />
+        <argument
+            android:name="joinRequest"
+            app:argType="bme.spoti.redflags.data.model.websocket.JoinRequest"
+            app:nullable="true" />
+        <argument
+            android:name="isReconnect"
+            app:argType="boolean"
+            android:defaultValue="false" />
+    </activity>
+    <fragment
+        android:id="@+id/nearbyRoomsFragment"
+        android:name="bme.spoti.redflags.ui.setup.screens.nearby.NearbyRoomsFragment"
+        android:label="NearbyRoomsFragment" >
+        <action
+            android:id="@+id/action_nearbyRoomsFragment_to_playerCreationFragment"
+            app:destination="@id/playerCreationFragment" />
+    </fragment>
+</navigation>

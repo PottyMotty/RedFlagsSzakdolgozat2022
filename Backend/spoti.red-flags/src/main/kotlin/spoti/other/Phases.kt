@@ -1,0 +1,14 @@
+package spoti.other
+
+enum class Phase() {
+    WAITING_FOR_PLAYERS,
+    PLAYERS_GATHERED,
+    SINGLE_REVEAL,
+    DATE_CRAFTING,
+    SHOWCASE_ONE_BY_ONE,
+    SHOWCASE_ALL,
+    SABOTAGE,
+    LEADERBOARD,
+    WINNER_SHOWCASE,
+    END
+}

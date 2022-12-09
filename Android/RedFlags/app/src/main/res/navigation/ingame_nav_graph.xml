@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ingame_nav_graph"
+    app:startDestination="@id/lobbyFragment2">
+
+    <fragment
+        android:id="@+id/lobbyFragment2"
+        android:name="bme.spoti.redflags.ui.ingame.fragments.LobbyFragment"
+        android:label="LobbyFragment" >
+        <action
+            android:id="@+id/action_lobbyFragment2_to_singleRevealFragment"
+            app:destination="@id/singleRevealFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/singleRevealFragment"
+        android:name="bme.spoti.redflags.ui.ingame.screens.single_reveal.SingleRevealFragment"
+        android:label="SingleRevealFragment" />
+</navigation>
